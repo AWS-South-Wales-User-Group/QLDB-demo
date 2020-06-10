@@ -8,6 +8,14 @@ provider:
 plugins:
   - serverless-pseudo-parameters
   - serverless-iam-roles-per-function
+  - aws-amplify-exports-serverless-plugin
+
+custom:
+  amplify:
+    - filename: ../frontend/src/aws-export.js
+      type: javascript
+      userPool: cognitoUserPool
+      appClient: cognitoUserPoolClient
 
 functions:
   hello:

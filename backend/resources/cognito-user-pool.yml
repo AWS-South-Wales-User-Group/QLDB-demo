@@ -3,3 +3,9 @@ Resources:
     Type: AWS::Cognito::UserPool
     Properties:
       UserPoolName: "#{AWS::StackName}-userpool"
+
+  cognitoUserPoolClient:
+    Type: AWS::Cognito::UserPoolClient
+    Properties:
+      UserPoolId: !Ref cognitoUserPool
+      ClientName: "#{AWS::StackName}-userpoolclient"
