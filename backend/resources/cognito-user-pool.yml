@@ -1,0 +1,5 @@
+Resources:
+  cognitoUserPool:
+    Type: AWS::Cognito::UserPool
+    Properties:
+      UserPoolName: "#{AWS::StackName}-userpool"
