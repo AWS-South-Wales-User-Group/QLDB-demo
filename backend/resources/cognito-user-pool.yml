@@ -3,6 +3,8 @@ Resources:
     Type: AWS::Cognito::UserPool
     Properties:
       UserPoolName: "#{AWS::StackName}-userpool"
+      AutoVerifiedAttributes:
+        - email     
 
   cognitoUserPoolClient:
     Type: AWS::Cognito::UserPoolClient

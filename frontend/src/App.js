@@ -9,6 +9,8 @@ import {
   Container,
   Jumbotron,
 } from "react-bootstrap";
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+
 
 function App() {
   return (
@@ -38,6 +40,7 @@ function App() {
           </Form>
         </Navbar.Collapse>
       </Navbar>
+      <AmplifySignOut />
 
       <Jumbotron className='mt-5'>
         <h1>Hello, world!</h1>
@@ -53,4 +56,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);

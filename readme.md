@@ -7,7 +7,7 @@ Created with
 ### Frontend
 
 #### sass
-yarn add node-sass --save-dev
+npm install node-sass --save-dev
 
 #### bootstrap
-yarn add react-bootstrap bootstrap
+npm install react-bootstrap bootstrap
