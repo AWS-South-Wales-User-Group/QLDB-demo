@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import Auth from 'aws-amplify';
 import {
   Navbar,
   Nav,
@@ -13,6 +14,12 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 
 function App() {
+  const [username, setUsername] = useState('');
+
+  useEffect(() => {
+      setUsername(Auth.user.username);
+  }, []);
+
   return (
     <Container>
       <Navbar bg='light' expand='lg'>
@@ -43,7 +50,7 @@ function App() {
       <AmplifySignOut />
 
       <Jumbotron className='mt-5'>
-        <h1>Hello, world!</h1>
+        <h1>{`Hello ${username}`}</h1>
         <p>
           This is a simple hero unit, a simple jumbotron-style component for
           calling extra attention to featured content or information.

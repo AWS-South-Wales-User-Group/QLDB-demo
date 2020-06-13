@@ -1,5 +1,0 @@
-{
-  "dependencies": {
-    "aws-amplify-exports-serverless-plugin": "^1.0.1"
-  }
-}
