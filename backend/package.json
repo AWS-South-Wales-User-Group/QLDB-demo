@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "aws-amplify-exports-serverless-plugin": "^1.0.1"
+  },
   "devDependencies": {
     "serverless-iam-roles-per-function": "^2.0.2",
     "serverless-pseudo-parameters": "^2.5.0"
