@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Auth from 'aws-amplify';
+import Auth from '@aws-amplify/auth';
 import {
   Navbar,
   Nav,
